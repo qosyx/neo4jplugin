@@ -1,14 +1,13 @@
-FROM debian:wheezy
+FROM ubuntu:18.04
 MAINTAINER Giacomo Triggiano "giacomo@creativecoding.it"
 
 RUN apt-get update && \
     apt-get install -y --no-install-recommends \
-        openjdk-7-jre \
+        openjdk-8-jdk \
         wget
 
 ENV NEO4J_VERSION 2.3.2
 ENV NEO4J_EDITION community
-
 RUN wget -O /var/neo4j.tar.gz "http://dist.neo4j.org/neo4j-$NEO4J_EDITION-$NEO4J_VERSION-unix.tar.gz" && \
     tar -xvzf /var/neo4j.tar.gz -C /var && \
     rm /var/neo4j.tar.gz && \
