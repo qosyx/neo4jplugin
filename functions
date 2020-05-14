@@ -131,6 +131,7 @@ service_info() {
   echo "       Alias: $SERVICE_ALIAS"
   echo "       Image: $SERVICE_VERSION"
   echo "       DSN: $SERVICE_URL"
+  echo "       ROOT: $SERVICE_ROOT"
 }
 
 service_list() {
